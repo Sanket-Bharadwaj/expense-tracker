@@ -18,11 +18,6 @@
 ✔️ **JSON-Based Storage** – All expenses saved locally  
 ✔️ **Fully Responsive** – Works on PC and mobile  
 
-📦 Coming Soon:  
-⬜ Delete / Edit entries  
-⬜ Monthly summaries  
-⬜ SQLite support  
-⬜ Login system  
 
 ---
 
@@ -78,11 +73,6 @@ Visit [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser 🎯
 
 ---
 
-## 📸 Screenshots
-
-<img src="https://i.imgur.com/7VjLuhN.png" width="700"/>
-
----
 
 ## 💡 Contact
 
