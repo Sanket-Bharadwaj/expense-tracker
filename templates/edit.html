@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Expense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right top, #4e54c8, #8f94fb);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #fbbf24;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        input, select, button {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-size: 1rem;
+            flex: 1;
+        }
+        input, select {
+            background-color: #ffffff;
+            color: #333;
+        }
+        button {
+            background-color: #3b82f6;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        button:hover {
+            background-color: #2563eb;
+        }
+        .error {
+            color: #f87171;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .cancel-link {
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            color: #34d399;
+            text-decoration: none;
+        }
+        .cancel-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Expense</h1>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        <form method="post">
+            <input type="date" name="date" value="{{ expense.date }}" required>
+            <select name="category" required>
+                <option value="{{ expense.category }}" selected>{{ expense.category }}</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="number" name="amount" value="{{ expense.amount }}" step="0.01" required>
+            <button type="submit">Update</button>
+        </form>
+        <a href="/" class="cancel-link">Cancel</a>
+    </div>
+</body>
+</html>

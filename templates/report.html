@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Report</title>
+</head>
+<body>
+    <h1>Expense Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Total Amount (₹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category, total in summary.items() %}
+            <tr>
+                <td>{{ category }}</td>
+                <td>{{ total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>

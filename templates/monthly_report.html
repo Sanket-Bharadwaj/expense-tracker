@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Expense Report</title>
+</head>
+<body>
+    <h1>Monthly Expense Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Expenses</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for month, expenses in monthly_summary.items() %}
+            <tr>
+                <td>{{ month }}</td>
+                <td>
+                    <ul>
+                        {% for expense in expenses %}
+                        <li>{{ expense.date }} - {{ expense.category }}: ₹{{ expense.amount }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>
