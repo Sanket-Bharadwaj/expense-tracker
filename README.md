@@ -40,7 +40,9 @@ expense-tracker/
 ├── expenses.json       # Local data storage
 │
 ├── templates/
-│   └── index.html      # Main UI template
+│   ├── index.html      # Main UI template
+│   ├── edit.html       # Template for editing an expense
+│   └── monthly_report.html # Template for monthly report
 │
 ├── static/
 │   ├── script.js       # Frontend logic for chart & form
