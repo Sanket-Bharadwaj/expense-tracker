@@ -18,7 +18,6 @@
 ✔️ **JSON-Based Storage** – All expenses saved locally  
 ✔️ **Fully Responsive** – Works on PC and mobile  
 
-
 ---
 
 ## 🛠️ Tech Stack  
@@ -32,6 +31,7 @@
 ---
 
 ## 📂 Project Structure
+
 
 ```
 expense-tracker/
